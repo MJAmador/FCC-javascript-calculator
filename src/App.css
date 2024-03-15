@@ -1,0 +1,164 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 201, 161);
+  height: 100vh;
+}
+
+.container .calculator {
+  width: 310px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: #000;
+  border-radius: 10px;
+  padding: 20px 12px 15px 12px;
+}
+
+.container .calculator .keys {
+  display: grid;
+  grid-template-areas:
+    "clear clear divide multiply"
+    "seven eight nine subtract"
+    "four five six add"
+    "one two three equals"
+    "zero zero decimal equals";
+  grid-template-columns: repeat(4, 70px);
+  grid-template-rows: repeat(5, 70px);
+  gap: 10px;
+}
+
+.container .calculator .output {
+  height: 50px;
+  margin: auto 10px 30px 10px;
+  font-size: 40px;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.container .calculator button {
+  border: none;
+  border-radius: 70px;
+  background-color: #2d2d2d;
+  color: #ffffff;
+  font-size: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, font-size 0.2s ease;
+}
+
+.container .calculator button:active {
+  background-color: #575757;
+  font-size: 25px;
+}
+
+.container .calculator .keys .operator-button {
+  color: rgb(0, 199, 0);
+  font-size: 45px;
+  transition: font-size 0.2s ease;
+}
+
+.container .calculator .keys .operator-button:active {
+  font-size: 37.35px;
+}
+
+#clear {
+  background-color: red;
+  grid-area: clear;
+  transition: background-color 0.2s ease;
+}
+
+#clear:active {
+  background-color: rgb(245, 79, 79);
+}
+
+#divide {
+  grid-area: divide;
+  font-size: 50px;
+  transition: font-size 0.2s ease;
+}
+
+#divide:active {
+  font-size: 41.5px;
+}
+
+#multiply {
+  grid-area: multiply;
+}
+
+#seven {
+  grid-area: seven;
+}
+
+#eight {
+  grid-area: eight;
+}
+
+#nine {
+  grid-area: nine;
+}
+
+#subtract {
+  grid-area: subtract;
+}
+
+#four {
+  grid-area: four;
+}
+
+#five {
+  grid-area: five;
+}
+
+#six {
+  grid-area: six;
+}
+
+#add {
+  grid-area: add;
+}
+
+#one {
+  grid-area: one;
+}
+
+#two {
+  grid-area: two;
+}
+
+#three {
+  grid-area: three;
+}
+
+#equals {
+  grid-area: equals;
+  background-color: rgb(0, 199, 0);
+  font-size: 40px;
+  transition: background-color 0.2s ease, font-size 0.2s ease;
+}
+
+#equals:active {
+  font-size: 33.2px;
+}
+
+#equals:active {
+  background-color: rgb(2, 219, 2);
+}
+
+#zero {
+  grid-area: zero;
+}
+
+#decimal {
+  grid-area: decimal;
+}
+
+footer {
+  text-align: center;
+  width: 220px;
+  color: #000;
+  padding-top: 12px;
+  font-size: 15px;
+}
+
