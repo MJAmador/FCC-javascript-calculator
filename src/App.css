@@ -4,16 +4,16 @@
   justify-content: center;
   align-items: center;
   background-color: rgb(0, 201, 161);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container .calculator {
-  width: 310px;
-  overflow-x: auto;
-  overflow-y: hidden;
+  width: 90%;
+  max-width: 310px;
   background-color: #000;
   border-radius: 10px;
-  padding: 20px 12px 15px 12px;
+  padding: 20px 13px;
+  overflow: auto;
 }
 
 .container .calculator .keys {
@@ -162,3 +162,17 @@ footer {
   font-size: 15px;
 }
 
+/* Setting new layout deppending on the device's width */
+@media screen and (max-width: 650px) {
+  .container .calculator {
+    transform: scale(0.8);
+    width: 90%;
+    height: auto;
+    margin: auto;
+  }
+
+  footer {
+    position: absolute;
+    padding-top: 460px;
+  }
+}
